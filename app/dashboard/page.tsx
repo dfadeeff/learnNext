@@ -6,7 +6,9 @@ import {fetchRevenue, fetchLatestInvoices} from '@/app/lib/data';
 
 export default async function Page() {
     const revenue = await fetchRevenue();
+    console.log('Fetched revenue:', revenue);
     const latestInvoices = await fetchLatestInvoices();
+    console.log('Fetched latest invoices:', latestInvoices);
     return (
         <main>
             <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
